@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Halleza Steps — Flatshoes & Heels Serba Ada</title>
+  <meta name="description" content="Halleza Steps: Toko flatshoes & heels serba ada. Warna brand: Ivory, Rose Gold, Navy Blue. Pemilik: Hilda DC." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header container">
+    <div class="brand">
+      <div class="logo" aria-hidden="true">
+        <!-- Inline simple logo icon -->
+        <svg width="32" height="32" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M8 48c8-6 16-10 24-12 8-2 12 2 16 8 2 3 1 7-2 8-10 3-28 3-38-4z" fill="var(--rose)"/>
+          <circle cx="48" cy="20" r="6" fill="var(--navy)"/>
+        </svg>
+      </div>
+      <div>
+        <h1 class="brand-name">Halleza Steps</h1>
+        <p class="tagline">Langkah elegan setiap hari — oleh Hilda DC</p>
+      </div>
+    </div>
+    <nav class="nav">
+      <a href="#home">Beranda</a>
+      <a href="#produk">Produk</a>
+      <a href="#tentang">Tentang</a>
+      <a href="#checkout">Checkout</a>
+      <button id="cartButton" class="btn cart-btn" aria-label="Buka keranjang">
+        <span class="icon-cart" aria-hidden="true"></span>
+        <span id="cartCount" class="badge">0</span>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero / Slider -->
+    <section id="home" class="hero">
+      <div class="slider" aria-label="Slider foto produk">
+        <div class="slides">
+          <div class="slide current">
+            <img src="assets/slide1.svg" alt="Koleksi Heels Elegan Halleza Steps" />
+            <div class="caption">
+              <h2>Heels Elegan</h2>
+              <p>Rasakan kenyamanan premium dalam setiap langkah.</p>
+              <a href="#produk" class="btn btn-primary">Lihat Produk</a>
+            </div>
+          </div>
+          <div class="slide">
+            <img src="assets/slide2.svg" alt="Flatshoes Nyaman untuk Sehari-hari" />
+            <div class="caption">
+              <h2>Flatshoes Nyaman</h2>
+              <p>Ringan, stylish, dan siap menemani aktivitasmu.</p>
+              <a href="#produk" class="btn btn-primary">Belanja Sekarang</a>
+            </div>
+          </div>
+          <div class="slide">
+            <img src="assets/slide3.svg" alt="Koleksi Premium Halleza Steps" />
+            <div class="caption">
+              <h2>Koleksi Premium</h2>
+              <p>Material pilihan & desain eksklusif.</p>
+              <a href="#produk" class="btn btn-primary">Jelajahi</a>
+            </div>
+          </div>
+          <div class="slide">
+            <img src="assets/slide4.svg" alt="Promo Spesial" />
+            <div class="caption">
+              <h2>Promo Spesial</h2>
+              <p>Diskon terbatas untuk koleksi terbaru.</p>
+              <a href="#produk" class="btn btn-primary">Ambil Promonya</a>
+            </div>
+          </div>
+        </div>
+        <button class="slider-nav prev" aria-label="Sebelumnya">‹</button>
+        <button class="slider-nav next" aria-label="Berikutnya">›</button>
+        <div class="dots" role="tablist" aria-label="Navigasi slider"></div>
+      </div>
+    </section>
+
+    <!-- Produk -->
+    <section id="produk" class="container section">
+      <header class="section-head">
+        <h2 data-animate="fade-up">Koleksi Terbaru</h2>
+        <p data-animate="fade-up" data-animate-delay="0.1">Flatshoes & heels serba ada — pilih favoritmu!</p>
+      </header>
+      <div id="productGrid" class="grid"></div>
+    </section>
+
+    <!-- Tentang -->
+    <section id="tentang" class="section about">
+      <div class="container about-inner">
+        <div class="about-text" data-animate="fade-right">
+          <h2>Tentang Halleza Steps</h2>
+          <p>
+            Halo! Aku <strong>Hilda DC</strong>, pemilik <strong>Halleza Steps</strong>.
+            Kami percaya setiap perempuan berhak melangkah dengan elegan dan nyaman —
+            baik dengan flatshoes ringan maupun heels yang memukau.
+          </p>
+          <p>
+            Warna identitas kami: <strong>Ivory</strong>, <strong>Rose Gold</strong>, dan <strong>Navy Blue</strong>,
+            mencerminkan kemurnian, keanggunan, dan kepercayaan diri.
+          </p>
+          <a href="#produk" class="btn btn-outline">Mulai Belanja</a>
+        </div>
+        <div class="about-art" data-animate="fade-left" aria-hidden="true">
+          <img src="assets/about.svg" alt="Ilustrasi sepatu elegan" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Checkout -->
+    <section id="checkout" class="section checkout">
+      <div class="container">
+        <header class="section-head">
+          <h2 data-animate="fade-up">Checkout</h2>
+          <p data-animate="fade-up" data-animate-delay="0.1">Lengkapi data kamu dan selesaikan pesanan.</p>
+        </header>
+        <form id="checkoutForm" class="checkout-form" novalidate>
+          <div class="form-group">
+            <label for="nama">Nama Lengkap</label>
+            <input type="text" id="nama" name="nama" placeholder="Nama kamu" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="email@contoh.com" required>
+          </div>
+          <div class="form-group">
+            <label for="alamat">Alamat</label>
+            <textarea id="alamat" name="alamat" placeholder="Alamat lengkap untuk pengiriman" required></textarea>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="kota">Kota</label>
+              <input type="text" id="kota" name="kota" required>
+            </div>
+            <div class="form-group">
+              <label for="kodepos">Kode Pos</label>
+              <input type="text" id="kodepos" name="kodepos" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="metode">Metode Pembayaran</label>
+            <select id="metode" name="metode" required>
+              <option value="">Pilih metode</option>
+              <option value="transfer">Transfer Bank</option>
+              <option value="ewallet">E-Wallet</option>
+              <option value="cod">COD (Bayar di tempat)</option>
+            </select>
+          </div>
+          <div class="order-summary">
+            <h3>Ringkasan Pesanan</h3>
+            <div id="checkoutSummary"></div>
+            <div class="total-line">
+              <span>Total</span>
+              <span id="checkoutTotal">Rp0</span>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary big">Selesaikan Pesanan</button>
+          <p class="note">Ini adalah demo statis (tanpa pembayaran sungguhan). Data tersimpan lokal di browser.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Cart Drawer -->
+  <aside id="cartDrawer" class="cart-drawer" aria-hidden="true" aria-labelledby="cart-title" role="dialog">
+    <div class="cart-header">
+      <h3 id="cart-title">Keranjang</h3>
+      <button id="closeCart" class="icon-close" aria-label="Tutup keranjang">×</button>
+    </div>
+    <div id="cartItems" class="cart-items"></div>
+    <div class="cart-footer">
+      <div class="cart-total"><span>Total</span><strong id="cartTotal">Rp0</strong></div>
+      <div class="cart-actions">
+        <a href="#checkout" id="goCheckout" class="btn btn-primary">Checkout</a>
+        <button id="clearCart" class="btn btn-outline">Kosongkan</button>
+      </div>
+    </div>
+  </aside>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <strong>Halleza Steps</strong> — Flatshoes & Heels Serba Ada<br/>
+        © <span id="year"></span> Halleza Steps. Dibuat dengan ❤️ oleh Hilda DC.
+      </div>
+      <div class="social">
+        <a href="#" aria-label="Instagram" title="Instagram">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 3a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm6.5-.5a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3z"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
